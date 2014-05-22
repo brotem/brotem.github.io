@@ -16,12 +16,12 @@
         $('body').keydown(function( event ) {
           if ( event.which == 37 ) {
             //alert("left");
-            currSlide.animate({left: "+=600"}, 1000);
+            pptContainer.find('div').animate({left: "+=600"}, 500);
             event.preventDefault();
           }
           if ( event.which == 39 ) {
             //alert("right");
-            currSlide.animate({right: "-=600"}, 1000);
+            pptContainer.find('div').animate({left: "-=600"}, 500);
             event.preventDefault();
           }
         });
