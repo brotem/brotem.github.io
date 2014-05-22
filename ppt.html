@@ -14,14 +14,15 @@
         currSlide.show();
         
         $('body').keydown(function( event ) {
+          var carousel = pptContainer.find('.ppt-carousel');
           if ( event.which == 37 ) {
             //alert("left");
-            pptContainer.find('div').animate({left: "+=600"}, 500);
+            carousel.animate({left: "+=600"}, 500);
             event.preventDefault();
           }
           if ( event.which == 39 ) {
             //alert("right");
-            pptContainer.find('div').animate({left: "-=600"}, 500);
+            carousel.animate({left: "-=600"}, 500);
             event.preventDefault();
           }
         });
@@ -30,13 +31,15 @@
   </head>
   <body>
     <div class="ppt-container">
-      <div class="first">1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
-      <div>6</div>
-      <div>7</div>
+      <div class="ppt-carousel">
+        <div class="first">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+      </div>
     </div>
   </body>
 </html>
