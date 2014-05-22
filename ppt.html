@@ -5,25 +5,26 @@
       .ppt-container { overflow: hidden; position: relative; width: 600px; border: 5px solid #aaa; border-radius: 10px; margin: 0 auto; }
       .ppt-container .ppt-carousel { left: 0; position: relative; width: 4000px;}
       .ppt-container div { display: inline-block; width: 600px; height: 600px; background-color: white;}
+      .bold { font-weight: bold; }
     </style>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>
       $(function(){
         var pptContainer = $('.ppt-container');
-        var firstSlide = pptContainer.find('div.first');
-        var currSlide = firstSlide;
-        currSlide.show();
+        //var firstSlide = pptContainer.find('div.first');
+        //var currSlide = firstSlide;
+        //currSlide.show();
         
         $('body').keydown(function( event ) {
           var carousel = pptContainer.find('.ppt-carousel');
           if ( event.which == 37 ) {
             //alert("left");
-            carousel.animate({left: "+=600"}, 500);
+            carousel.animate({left: "+=620"}, 500);
             event.preventDefault();
           }
           if ( event.which == 39 ) {
             //alert("right");
-            carousel.animate({left: "-=600"}, 500);
+            carousel.animate({left: "-=620"}, 500);
             event.preventDefault();
           }
         });
@@ -33,12 +34,22 @@
   <body>
     <div class="ppt-container">
       <div class="ppt-carousel">
-        <div class="first">1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
+        <div>
+          <p class="bold">מיינקראפט</p>
+          <p>משחק מחשב שנוצר על ידי מרקוס פירסון, הידוע בכינויו Notch, בשנת 2009</p>
+          <p>המשחק מאפשר לשחקנים לבנות דברים מקוביות בעולם תלת מימדי</p>
+        </div>
+        <div>
+          <p>אפשר לשחק במצב ״השרדות״ שבו על השחקנים למצוא אוכל וציוד, לשמור על הבריאות שלהם ולברוח מיצורים עוינים</p>
+        </div>
+        <div>
+          <p>אפשר לשחק במצב ״יצירתי״ שבו לשחקנים ציוד ומשאבים ללא הגבלה, יכולת לעוף.</p>
+          <p>כמו כן, המשחק מאפשר לשחקנים להכין כלים כמו שריון, חרב, גרזן ומקוש</p>
+        </div>
+        <div>
+          <p class="bold">Multi-player</p>
+          <p>מצב שבו כמה שחקנים יכולים לשחק ביחד באותו עולם. להשלים משימות ביחד, להתחרות או להלחם.</p>
+        </div>
       </div>
     </div>
   </body>
