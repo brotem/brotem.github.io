@@ -12,6 +12,21 @@
         var firstSlide = pptContainer.find('div.first');
         var currSlide = firstSlide;
         currSlide.show();
+        
+        pptContainer.keydown(function( event ) {
+          if ( event.which == 37 ) {
+            alert("left");
+            event.preventDefault();
+          }
+          if ( event.which == 39 ) {
+            alert("right");
+            event.preventDefault();
+          }
+      });
+   
+});        
+        
+        
       });
     </script>
   </head>
