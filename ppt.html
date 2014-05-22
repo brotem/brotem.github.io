@@ -2,7 +2,7 @@
   <head>
     <style>
       .ppt-container div { display:none; }
-      .ppt-container div { float: left; }
+      .ppt-container div { position: relative; }
       .ppt-container div { width: 600px; height: 600px; }
     </style>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -16,12 +16,12 @@
         $('body').keydown(function( event ) {
           if ( event.which == 37 ) {
             //alert("left");
-            currSlide.animate({left: "+=50"}, 1000);
+            currSlide.animate({left: "+=600"}, 1000);
             event.preventDefault();
           }
           if ( event.which == 39 ) {
             //alert("right");
-            currSlide.animate({right: "+=50"}, 1000);
+            currSlide.animate({right: "+=600"}, 1000);
             event.preventDefault();
           }
         });
