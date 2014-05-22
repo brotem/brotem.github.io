@@ -7,10 +7,12 @@
     </style>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>
-      var pptContainer = $('.ppt-container');
-      var firstSlide = pptContainer.find('div.first');
-      var currSlide = firstSlide;
-      currSlide.show();
+      $(function(){
+        var pptContainer = $('.ppt-container');
+        var firstSlide = pptContainer.find('div.first');
+        var currSlide = firstSlide;
+        currSlide.show();
+      });
     </script>
   </head>
   <body>
