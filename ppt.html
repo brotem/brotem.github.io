@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <style>
+      .ppt-container div { display:none; }
+      .ppt-container div { float: left; }
+      .ppt-container div { width: 200px; height: 200px; }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+      var pptContainer = $('.ppt-container');
+      var firstSlide = pptContainer.find('div:first');
+      var currSlide = firstSlide;
+      currSlide.show();
+    </script>
+  </head>
+  <body>
+    <div class="ppt-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+    </div>
+  </body>
+</html>
